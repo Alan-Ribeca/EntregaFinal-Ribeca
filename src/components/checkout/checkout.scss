@@ -1,0 +1,74 @@
+.formContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.compra {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  margin-top: 4rem;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+label {
+  margin: 0.5rem 0;
+}
+
+input {
+  height: 35px;
+  width: 300px;
+  padding: 0 0 0 16px;
+  border-radius: 9px;
+  outline: none;
+  background-color: #f2f2f2;
+  border: 1px solid #e5e5e500;
+  transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+.finalizarCompra:disabled {
+  background: #ffffff;
+  box-shadow: none;
+  color: #c5c5c5;
+
+  &:hover {
+    border: 1px solid rgb(255, 0, 0);
+  }
+}
+.finalizarCompra {
+  color: #24b408ad;
+  padding: 0.7rem 2rem;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  cursor: pointer;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+  box-shadow: 6px 6px 12px #06800c31;
+  margin-top: 1.5rem;
+
+  &:hover {
+    border: 1px solid rgb(24, 255, 3);
+  }
+
+  &:active {
+    box-shadow: 4px 4px 12px #c5c5c5, -4px -4px 12px #ffffff;
+  }
+}
+
+.error {
+  font-size:small;
+  color: #777777;
+}
+
+.formularioEnviado {
+  margin: 2rem 0 0 0;
+  font-size: larger;
+}

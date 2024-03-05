@@ -1,0 +1,218 @@
+.itemDetalle {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  margin: 4rem 0 7rem 0;
+  color: white;
+  height: 35rem;
+  overflow: hidden;
+  background: rgb(236, 236, 236);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 10px,
+    rgba(0, 0, 0, 0.3) 0px 20px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+  img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .homeItem {
+    position: relative;
+
+    .home {
+      position: absolute;
+      left: 90%;
+      color: white;
+
+      &:hover {
+        color: #3f9207;
+        cursor: pointer;
+      }
+    }
+  }
+
+  button {
+    border: none;
+    background-color: green;
+    margin: 0.5rem 0.5rem 0.5rem 0;
+    color: white;
+  }
+
+  .contenedorInfo {
+    background-color: rgb(46, 45, 45);
+    padding: 2rem 0 0 2rem;
+
+    .categoria {
+      font-size: small;
+      color: green;
+    }
+
+    .nombreProd {
+      font-size: xx-large;
+      margin: 1rem 0 0 0;
+    }
+
+    .precioProduc {
+      font-size: x-large;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    }
+
+    .botonesProduc {
+      height: 241px;
+      margin-bottom: 0.5rem;
+      .btnItemProduc {
+        width: 8em;
+        position: relative;
+        height: 2.5rem;
+        border: 3px ridge green;
+        outline: none;
+        background-color: transparent;
+        color: white;
+        transition: 1s;
+        border-radius: 0.3em;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        margin: 1rem 1.5rem 0 0;
+      }
+
+      .btnItemProduc::after {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: 3%;
+        width: 95%;
+        height: 40%;
+        background-color: rgb(46, 45, 45);
+        transition: 0.5s;
+        transform-origin: center;
+      }
+
+      .btnItemProduc::before {
+        content: "";
+        transform-origin: center;
+        position: absolute;
+        top: 80%;
+        left: 3%;
+        width: 95%;
+        height: 40%;
+        background-color: rgb(46, 45, 45);
+        transition: 0.5s;
+      }
+
+      .btnItemProduc:hover::before,
+      button:hover::after {
+        transform: scale(0);
+      }
+
+      .btnItemProduc:hover {
+        box-shadow: inset 0px 0px 25px #3f9207;
+      }
+
+      .lineaItem {
+        border-color: rgb(46, 94, 46);
+        max-width: 61.4%;
+        margin: 1rem 0 0 0;
+      }
+
+      .descripsionProduc {
+        max-width: 60%;
+        min-height: 6rem;
+        word-spacing: 2px;
+        margin-top: 2rem;
+      }
+
+      .cuidados {
+        list-style-type: none;
+        padding: 0;
+        max-width: 60%;
+        display: none;
+        min-height: 6rem;
+        word-spacing: 2px;
+        margin-top: 2rem;
+        overflow-y: scroll;
+        height: 110px;
+
+        &::-webkit-scrollbar {
+          width: 12px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: green;
+          border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar-track {
+          background-color: rgba(53, 52, 52, 0.781);
+          border-radius: 6px;
+        }
+
+        &::-webkit-scrollbar-button {
+          border-radius: none;
+        }
+
+        .cuidadosLi {
+          text-transform: uppercase;
+          color: #3f9207;
+        }
+
+        .liItem {
+          width: 390px;
+          margin-bottom: 1rem;
+        }
+      }
+
+      .valoracion {
+        max-width: 60%;
+        display: none;
+        min-height: 6rem;
+        word-spacing: 2px;
+        margin-top: 2rem;
+      }
+    }
+
+    .stock {
+      max-width: 60%;
+      .cantidad {
+        display: flex;
+        justify-content: space-around;
+
+        .btnConunt {
+          font-size: 2rem;
+        }
+
+        .cantidadItem {
+          margin: 0;
+          font-size: 1rem;
+          text-align: center;
+          font-weight: bold;
+        }
+        .modificar {
+          border-radius: 1px;
+          width: 2.5rem;
+          background-color: transparent;
+          margin: 0.5rem 0 0 0;
+          font-size: 1.5rem;
+        }
+      }
+
+      .numero {
+        margin: 0.5rem 0 0 0;
+        font-size: 1.5rem;
+        text-align: center;
+      }
+    }
+
+    .comprarItem {
+      position: relative;
+      top: 7%;
+      left: 15%;
+      width: 14rem;
+      height: 3rem;
+      cursor: pointer;
+      &:hover {
+        background-color: #04dd0f9c;
+      }
+    }
+  }
+}

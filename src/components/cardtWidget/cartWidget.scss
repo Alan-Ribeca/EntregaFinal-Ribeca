@@ -1,0 +1,27 @@
+.boton-hover {
+    position: relative;
+    
+    .bi-cart {
+        fill:currentColor;
+        transition: fill 0.3s;
+    }
+
+    &:hover {
+        .bi-cart {
+            fill:#02be0b;
+        }
+    }
+    .carrito {
+        position: absolute;
+        top: 0;
+        right: -5px; 
+        color: black;
+        width: 15px; 
+        height: 1px; 
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        font-size: 22px; 
+    }
+}
+

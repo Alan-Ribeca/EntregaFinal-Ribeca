@@ -1,0 +1,24 @@
+@use "../sass/style.scss";
+
+body {
+  background-color: rgba(136, 255, 176, 0.068);
+  width: 70%;
+  margin: 0 auto;
+  font-family: "Times New Roman", Times, serif;
+
+  .main {
+    min-height: 100vh;
+  }
+}
+@media screen and (max-width: 1270px) {
+  body {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    width: 94%;
+  }
+}
+

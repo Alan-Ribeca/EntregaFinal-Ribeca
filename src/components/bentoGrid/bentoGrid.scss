@@ -1,0 +1,124 @@
+.bento {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+
+  .auri,
+  .componentes,
+  .pc,
+  .celu,
+  .netbo,
+  .moni {
+    position: relative;
+  }
+  .nombreProducto {
+    color: white;
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+    font-size: xx-large;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .bentoButon {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0.7em 2.7em;
+    letter-spacing: 0.06em;
+    border-radius: 0.6em;
+    overflow: hidden;
+    transition: all 0.3s;
+    line-height: 1.4em;
+    white-space: nowrap;
+    border: 2px solid #1bfd9c;
+    color: #1bfd9c;
+    background: linear-gradient(
+      to right,
+      rgba(27, 253, 156, 0.1) 1%,
+      transparent 40%,
+      transparent 60%,
+      rgba(27, 253, 156, 0.1) 100%
+    );
+    box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4),
+      0 0 9px 3px rgba(27, 253, 156, 0.1);
+    cursor: pointer;
+
+    &:hover {
+      color: #82ffc9;
+      box-shadow: inset 0 0 10px rgb(27, 253, 155),
+        0 0 9px 3px rgba(27, 253, 155, 0.288);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -4em;
+      width: 4em;
+      height: 100%;
+      top: 0;
+      transition: transform 0.4s ease-in-out;
+      background: linear-gradient(
+        to right,
+        transparent 1%,
+        rgba(27, 253, 156, 0.1) 40%,
+        rgba(27, 253, 156, 0.1) 60%,
+        transparent 100%
+      );
+    }
+
+    &:hover::before {
+      transform: translateX(15em);
+    }
+  }
+
+  .auri {
+    grid-column: 1 / 3;
+
+    img {
+      object-position: top;
+    }
+  }
+  .moni {
+    grid-column: 3 / 5;
+
+    img {
+      object-position: top;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  .pc {
+    .pcFoto {
+      white-space: nowrap;
+    }
+  }
+}
+@media screen and (max-width: 1600px) {
+  .bento .nombreProducto {
+    font-size: x-large;
+  }
+
+  .bento img {
+    height: 220px;
+  }
+}
+
+@media screen and (min-width: 1271px) and (max-width: 1450px) {
+  .bento img {
+    height: 185px;
+  }
+
+  .bento .bentoButon {
+    letter-spacing: initial;
+    line-height: initial;
+  }
+}

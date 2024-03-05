@@ -1,0 +1,67 @@
+.itemCart {
+  margin-top: 3rem;
+  background: rgba(253, 253, 253, 0.384);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.20);
+  width: 850px;
+  height: 130px;
+  border-radius: 7px;
+  overflow: hidden;
+
+  .infoProduc {
+    display: flex;
+    position: relative;
+    img {
+      width: 130px;
+    }
+
+    .description {
+      max-width: 66%;
+      font-size: medium;
+      margin: 0.5rem 2rem 1rem 1rem;
+    }
+
+    .cantidad {
+      width: 20%;
+      margin-top: 1rem;
+      .modificar {
+        border: none;
+        background-color: transparent;
+        font-size: 1.5rem;
+        width: 2rem;
+      }
+      .cantidadProduc {
+        font-size: 2.5rem;
+      }
+
+      .totalPrice {
+        font-weight: bold;
+      }
+    }
+
+    .eliminar {
+      position: absolute;
+      bottom: 0%;
+      left: 16.5%;
+      border: none;
+      background-color: transparent;
+      color: rgba(0, 0, 255, 0.623);
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .comprarIndivual {
+      position: absolute;
+      bottom: 0%;
+      left: 25%;
+      border: none;
+      background-color: transparent;
+      color: #02be0b;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

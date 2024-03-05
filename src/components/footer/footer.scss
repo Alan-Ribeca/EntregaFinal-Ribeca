@@ -1,0 +1,71 @@
+.footer {
+  background-image: url(/img/fondo.png);
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: max-content;
+  margin: 4rem 0 0 0;
+  color: rgb(40, 134, 21);
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-gap: 10px;
+
+  .procteccion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .escudo {
+      margin-top: 0.5rem;
+      margin-bottom: 0.3rem;
+    }
+    .tituloEscudo {
+      margin: 0;
+      color: white;
+    }
+    .proteccion-p {
+      width: 50%;
+      margin-top: 0.5rem;
+      font-size: small;
+      color: white;
+
+      .signo {
+        color: green;
+      }
+    }
+  }
+
+  .tarjeta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .tituloTarjeta {
+      margin: 0;
+      color: white;
+    }
+    .infoCard {
+      width: 70%;
+      margin-top: 0.5rem;
+      font-size: small;
+      color: white;
+
+      .sinTarjeta {
+        color: green;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1048px) {
+    .footer{
+        align-items: center;
+
+        .procteccion .escudo {
+            margin-top: 0;
+        }
+    }
+  }
+  

@@ -1,0 +1,89 @@
+.containerProductos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 4rem;
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  .Producto {
+    overflow: hidden;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+    min-height: 21rem;
+
+    &:hover {
+      background-color: white;
+      .titleProduc {
+        color: #02be0b;
+      }
+
+      .precio {
+        color: #02be0b;
+      }
+
+      strong.envio {
+        color: black;
+      }
+
+      .stock {
+        color: #02be0b;
+      }
+
+      strong.verMas {
+        color: black;
+      }
+    }
+    .img-producto {
+      height: 56%;
+      img {
+        width: 100%;
+        aspect-ratio: 2/2;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .infoProducto {
+      margin: 0.8rem 0 0 0.5rem;
+      position: relative;
+      height: 40%;
+
+      .titleProduc {
+        font-weight: lighter;
+        margin: 0 0 0.3rem 0;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-size: x-large;
+      }
+
+      .precio {
+        font-size: 1.3rem;
+        display: inline;
+      }
+
+      .envio {
+        font-size: small;
+        color: #02be0b;
+        margin-left: 0.4rem;
+      }
+
+      .stock {
+        font-size: 15px;
+        margin-top: 0.6rem;
+        font-weight: 800;
+      }
+
+      .verMas {
+        position: absolute;
+        bottom: 5%;
+        left: 60%;
+        color: #02be0b;
+      }
+    }
+  }
+}
