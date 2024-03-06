@@ -9,13 +9,13 @@ export const BotonesNavbar = () => {
         <Link to={"/"}>
           <button className="botonNav"> Inicio </button>
         </Link>
-        <Link to={"/category/interior"}>
+        <Link to={"/category/Pc"}>
           <button className="botonNav"> Pc </button>
         </Link>
-        <Link to={"/category/exterior"}>
+        <Link to={"/category/Celular"}>
           <button className="botonNav"> Celulares </button>
         </Link>
-        <Link to={"/category/holamundo"}>
+        <Link to={"/category/Monitor"}>
           <button className="botonNav"> Monitores </button>
         </Link>
         <Link to={"/category/accesorios"}>

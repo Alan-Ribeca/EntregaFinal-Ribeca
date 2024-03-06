@@ -260,7 +260,7 @@ const prods = [
         "price": 101999,
         "stock": 4,
         "img": "https://firebasestorage.googleapis.com/v0/b/react01-4606f.appspot.com/o/auri17.jpg?alt=media&token=4172076b-27a8-4da7-a395-62594a2d48f9",
-        "category": "Pc",
+        "category": "accesorios",
         "description": "Ideado para los gamers más exigentes",
         "valoracion": "son super comodos, lo recomiendo mucho 10 de 10",
         "detalle": [
@@ -276,7 +276,7 @@ const prods = [
         "price": 101999,
         "stock": 4,
         "img": "https://firebasestorage.googleapis.com/v0/b/react01-4606f.appspot.com/o/auri1.jpg?alt=media&token=ba437d96-e2d8-4dfc-814a-8a9ab9eece4c",
-        "category": "Auriculares",
+        "category": "accesorios",
         "description": "Ideado para los gamers más exigentes",
         "valoracion": "son super comodos, lo recomiendo mucho 10 de 10",
         "detalle": [
@@ -292,7 +292,7 @@ const prods = [
         "price": 38636,
         "stock": 12,
         "img": "https://firebasestorage.googleapis.com/v0/b/react01-4606f.appspot.com/o/auri2.jpg?alt=media&token=11686e4b-5f3b-44be-9185-fabda409a99b",
-        "category": "Auriculares",
+        "category": "accesorios",
         "description": "¡Experimentá la adrenalina de sumergirte en la escena de otra manera! con estos auriculares gamer!.",
         "valoracion": "son super comodos, lo recomiendo mucho 10 de 10",
         "detalle": [
@@ -308,7 +308,7 @@ const prods = [
         "price": 75999,
         "stock": 25,
         "img": "https://firebasestorage.googleapis.com/v0/b/react01-4606f.appspot.com/o/auri3.jpg?alt=media&token=bd601bd9-26f2-4859-b0d9-627f323fbfe8",
-        "category": "Auriculares",
+        "category": "accesorios",
         "description": "¡Experimentá la adrenalina de sumergirte en la escena de otra manera! con estos auriculares gamer!.",
         "valoracion": "son super comodos, lo recomiendo mucho 10 de 10",
         "detalle": [
@@ -324,7 +324,7 @@ const prods = [
         "price": 21155,
         "stock": 2,
         "img": "https://firebasestorage.googleapis.com/v0/b/react01-4606f.appspot.com/o/auri4.jpg?alt=media&token=603d4540-2134-4454-8c06-436dc0a15145",
-        "category": "Auriculares",
+        "category": "accesorios",
         "description": "¡Experimentá la adrenalina de sumergirte en la escena de otra manera! con estos auriculares gamer!.",
         "valoracion": "son super comodos, lo recomiendo mucho 10 de 10",
         "detalle": [
@@ -340,7 +340,7 @@ const prods = [
         "price": 19738,
         "stock": 26,
         "img": "https://firebasestorage.googleapis.com/v0/b/react01-4606f.appspot.com/o/auri5.jpg?alt=media&token=81674c82-aa5c-4ad3-90ea-194072556e9a",
-        "category": "Auriculares",
+        "category": "accesorios",
         "description": "¡Experimentá la adrenalina de sumergirte en la escena de otra manera! con estos auriculares gamer!.",
         "valoracion": "son super comodos, lo recomiendo mucho 10 de 10",
         "detalle": [
@@ -356,7 +356,7 @@ const prods = [
         "price": 10999,
         "stock": 4,
         "img": "https://firebasestorage.googleapis.com/v0/b/react01-4606f.appspot.com/o/auri6.jpg?alt=media&token=64644fd2-7080-42b0-be1f-e13ce9cdda20",
-        "category": "Auriculares",
+        "category": "accesorios",
         "description": "Ideado para los gamers más exigentes",
         "valoracion": "son super comodos, lo recomiendo mucho 10 de 10",
         "detalle": [
@@ -372,7 +372,7 @@ const prods = [
         "price": 104500,
         "stock": 6,
         "img": "https://firebasestorage.googleapis.com/v0/b/react01-4606f.appspot.com/o/auri7.jpg?alt=media&token=0e12c27b-c3ae-44f8-be44-2e0f7819e73c",
-        "category": "Auriculares",
+        "category": "accesorios",
         "description": "Ideado para los gamers más exigentes",
         "valoracion": "son super comodos, lo recomiendo mucho 10 de 10",
         "detalle": [
@@ -388,7 +388,7 @@ const prods = [
         "price": 49999,
         "stock": 28,
         "img": "https://firebasestorage.googleapis.com/v0/b/react01-4606f.appspot.com/o/auri8.jpg?alt=media&token=2558bfde-652d-4965-9030-4cf8d453f123",
-        "category": "Auriculares",
+        "category": "accesorios",
         "description": "Ideado para los gamers más exigentes",
         "valoracion": "son super comodos, lo recomiendo mucho 10 de 10",
         "detalle": [
@@ -404,7 +404,7 @@ const prods = [
         "price": 108290,
         "stock": 8,
         "img": "https://firebasestorage.googleapis.com/v0/b/react01-4606f.appspot.com/o/auri9.jpg?alt=media&token=7bdf38a9-4c02-4814-a3fd-16a096924571",
-        "category": "Auriculares",
+        "category": "accesorios",
         "description": "Su sonido envolvente del más alto nivel se convierte en el protagonista de la escena.",
         "valoracion": "son super comodos, lo recomiendo mucho 10 de 10",
         "detalle": [
@@ -420,7 +420,7 @@ const prods = [
         "price": 26998,
         "stock": 4,
         "img": "https://firebasestorage.googleapis.com/v0/b/react01-4606f.appspot.com/o/auri10.jpg?alt=media&token=e0626452-0038-4897-90cb-bad0a738f7ea",
-        "category": "Auriculares",
+        "category": "accesorios",
         "description": "Su sonido envolvente del más alto nivel se convierte en el protagonista de la escena.",
         "valoracion": "son super comodos, lo recomiendo mucho 10 de 10",
         "detalle": [
@@ -1193,7 +1193,7 @@ export const createProducst = async () => {
     })
 }
 
-createProducst()
+
 
 export const getProducts = async () => {
     const productos = await getDocs(collection(bdd, "productos"))
