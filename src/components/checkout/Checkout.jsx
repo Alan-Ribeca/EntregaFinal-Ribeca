@@ -1,10 +1,24 @@
+/* eslint-disable no-unused-vars */
 import "./checkout.scss";
+import 'react-toastify/dist/ReactToastify.css';
 import { useRef, useState } from "react";
 import { validar } from "./validar";
+import { useCarritoContext } from "../../context/CartContext.jsx";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify"
+import {
+  createOrdenCompra,
+  getOrdenCompra,
+  getProduct,
+  updateProduct,
+} from "../../firebase/firebase";
+
 
 export const Checkout = () => {
   const formRef = useRef();
   const [errores, setErrores] = useState({});
+  const navigate = useNavigate();
+  const { carrito, totalPrice, emptyCart } = useCarritoContext();
   const [formulario, setFormulario] = useState({
     nombre: "",
     dni: "",
@@ -41,18 +55,88 @@ export const Checkout = () => {
 
   const enviar = (e) => {
     const datForm = new FormData(formRef.current);
-    const data = Object.fromEntries(datForm);
-    console.log(data);
-    e.preventDefault()
+    const cliente = Object.fromEntries(datForm);
 
-    const formulario = document.querySelector(".compra")
-    const texto = document.createElement("P")
-    texto.textContent = "¡Felicitaciones por su compra!"
-    texto.className = "formularioEnviado"
-    formulario.appendChild(texto)
+    e.preventDefault();
 
-    setTimeout( () => {
-      e.target.reset()
+    const aux = [...carrito];
+
+    aux.forEach((prodCarrito) => {
+      getProduct(prodCarrito.id).then((prodBDD) => {
+        if (prodBDD.stock >= prodCarrito.quantity) {
+          //Si existe stock suficinete para realizar la compra
+          prodBDD.stock -= prodCarrito.quantity;
+          updateProduct(prodBDD.id, prodBDD);
+        } else {
+          toast.info(
+            `El producto con el nombre ${prodBDD.title} no puede continuar con la compra ya que no posee stock suficiente`,
+            {
+              position: "top-right",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "dark",
+            }
+          );
+          aux.filter((prod) => prod.id != prodBDD.id); //Elimino el producto del carrito al tener stock suficiente
+        }
+      });
+    });
+
+    const formulario = document.querySelector(".compra");
+    const texto = document.createElement("P");
+    texto.textContent = "¡Felicitaciones por su compra!";
+    texto.className = "formularioEnviado";
+    formulario.appendChild(texto);
+
+    const aux2 = aux.map((prod) => ({
+      id: prod.id,
+      quantity: prod.quantity,
+      price: prod.price,
+    }));
+
+    createOrdenCompra(
+      cliente,
+      totalPrice(),
+      aux2,
+      new Date().toLocaleDateString("es-AR"),
+      { timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone }
+    ).then((ordenCompra) => {
+      toast
+        .success(
+          `🛒 Muchas gracias por comprar con nosotros, su ID de compra es: ${
+            ordenCompra.id
+          } por un total de $${totalPrice()}. En breve nos contactaremos para realizar envio`,
+          {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          }
+        )
+        .catch((e) => {
+          toast.error(`Error al generar orden de compra: ${e}`, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
+        });
+    });
+
+    setTimeout(() => {
+      e.target.reset();
       setFormulario({
         nombre: "",
         dni: "",
@@ -61,12 +145,11 @@ export const Checkout = () => {
         direccion: "",
       });
 
-      texto.remove()
+      texto.remove();
       setErrores({});
 
-      window.location.replace("/")
-    }, 2000)
-
+      window.location.replace("/");
+    }, 5000);
   };
 
   return (

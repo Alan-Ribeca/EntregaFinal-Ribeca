@@ -1218,3 +1218,21 @@ export const updateProduct = async (id, info) => {
 export const deleteProduct = async (id) => {
     await deleteDoc(doc(bdd, "productos", id))
 }
+
+
+export const createOrdenCompra = async (cliente, precioTotal, carrito, fecha) => {
+    const ordenCompra = await addDoc(collection(bdd, "ordenesCompra"), {
+        cliente: cliente,
+        items: carrito,
+        precioTotal: precioTotal,
+        fecha: fecha
+    })
+    return ordenCompra
+}
+
+
+export const getOrdenCompra = async (id) => {
+    const ordenCompra = await getDoc(doc(bdd, "ordenesCompra", id))
+    const item = {...ordenCompra.data(), id: ordenCompra.id}
+    return item
+}

@@ -16,12 +16,13 @@ export const ItemListContainer = () => {
       .then((prods) => {
         if (cid) {
           const productosFiltrados = prods.filter(
-            (prod) => prod.category === cid
+            (prod) => prod.category === cid && prod.stock > 0
           );
           ocultarBento(false);
           setProducts(productosFiltrados);
         } else {
-          setProducts(prods);
+          const productosFiltrados = prods.filter(prod => prod.stock > 0)
+          setProducts(productosFiltrados);
           ocultarBento(true);
         }
       })
