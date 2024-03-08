@@ -1,7 +1,7 @@
 .itemDetalle {
   display: grid;
   grid-template-columns: 35% 65%;
-  margin: 4rem 0 7rem 0;
+  margin-top: 4rem;
   color: white;
   height: 35rem;
   overflow: hidden;
@@ -47,17 +47,18 @@
     padding: 2rem 0 0 2rem;
 
     .categoria {
-      font-size: small;
       color: green;
     }
 
     .nombreProd {
-      font-size: xx-large;
+      font-size: x-large;
+      max-width: 86%;
       margin: 1rem 0 0 0;
     }
 
     .precioProduc {
-      font-size: x-large;
+      font-size: large;
+      font-weight: normal;
       font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
         sans-serif;
     }
@@ -78,7 +79,7 @@
         font-size: 16px;
         font-weight: bold;
         cursor: pointer;
-        margin: 1rem 1.5rem 0 0;
+        margin: 2.5rem 1.5rem 0 0;
       }
 
       .btnItemProduc::after {
@@ -116,15 +117,18 @@
 
       .lineaItem {
         border-color: rgb(46, 94, 46);
-        max-width: 61.4%;
+        max-width: 430px;
         margin: 1rem 0 0 0;
       }
 
       .descripsionProduc {
-        max-width: 60%;
+        font-size:small;
+        max-width: 50%;
         min-height: 6rem;
         word-spacing: 2px;
-        margin-top: 2rem;
+        margin-top: 1.5rem;
+        max-height: 100px;
+        text-transform: uppercase;
       }
 
       .cuidados {
@@ -134,7 +138,6 @@
         display: none;
         min-height: 6rem;
         word-spacing: 2px;
-        margin-top: 2rem;
         overflow-y: scroll;
         height: 110px;
 
@@ -168,16 +171,18 @@
       }
 
       .valoracion {
-        max-width: 60%;
+        max-width: 50%;
         display: none;
         min-height: 6rem;
         word-spacing: 2px;
         margin-top: 2rem;
+        text-transform: uppercase;
+        font-size:small;
       }
     }
 
     .stock {
-      max-width: 60%;
+      max-width: 53%;
       .cantidad {
         display: flex;
         justify-content: space-around;

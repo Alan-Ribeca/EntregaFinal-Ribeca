@@ -792,7 +792,7 @@ const prods = [
         ]
     },
     {
-        "title": "Notebook Lenovo LOQ LOQ 15IRH8 storm grey Intel Core i5 12450H 8GB de RAM 512GB SSD, NVIDIA GeForce RTX 3050 144 Hz 1920x1080px Windows 11 Home",
+        "title": "Notebook Lenovo LOQ LOQ 15IRH8 storm grey Intel Core i5 12450H 8GB de RAM 512GB SSD, Windows 11 Home",
         "price": 999999,
         "stock": 28,
         "img": "https://firebasestorage.googleapis.com/v0/b/react01-4606f.appspot.com/o/lap1.jpg?alt=media&token=05a85190-07df-4a0c-8043-a1b233fe9129",
@@ -872,7 +872,7 @@ const prods = [
         ]
     },
     {
-        "title": "Notebook Lenovo IdeaPad 14ADA7 gris AMD Ryzen 5 3500U 16GB de RAM 512GB SSD, Integrated AMD Radeon Graphics 60 Hz 1366x768px",
+        "title": "Notebook Lenovo IdeaPad 14ADA7 gris AMD Ryzen 5 3500U 16GB de RAM 512GB SSD",
         "price": 697999,
         "stock": 81,
         "img": "https://firebasestorage.googleapis.com/v0/b/react01-4606f.appspot.com/o/lap6.jpg?alt=media&token=300a6fae-2b43-4083-b3ed-5a2be27dfec2",
@@ -1176,7 +1176,6 @@ export const createProducst = async () => {
 
     })
 }
-
 
 export const getProducts = async () => {
     const productos = await getDocs(collection(bdd, "productos"))
