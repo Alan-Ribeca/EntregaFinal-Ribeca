@@ -39,11 +39,12 @@
     }
     .img-producto {
       height: 56%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       img {
-        width: 100%;
-        aspect-ratio: 2/2;
-        height: 100%;
         object-fit: cover;
+        height: 70%;
       }
     }
 
