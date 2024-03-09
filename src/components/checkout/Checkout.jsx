@@ -64,12 +64,11 @@ export const Checkout = () => {
     aux.forEach((prodCarrito) => {
       getProduct(prodCarrito.id).then((prodBDD) => {
         if (prodBDD.stock >= prodCarrito.quantity) {
-          //Si existe stock suficinete para realizar la compra
           prodBDD.stock -= prodCarrito.quantity;
           updateProduct(prodBDD.id, prodBDD);
         } else {
           toast.info(
-            `El producto con el nombre ${prodBDD.title} no puede continuar con la compra ya que no posee stock suficiente`,
+            `El producto ${prodBDD.title} no puede continuar con la compra ya que no posee stock suficiente`,
             {
               position: "top-right",
               autoClose: 5000,
@@ -81,7 +80,7 @@ export const Checkout = () => {
               theme: "dark",
             }
           );
-          aux.filter((prod) => prod.id != prodBDD.id); //Elimino el producto del carrito al tener stock suficiente
+          aux.filter((prod) => prod.id != prodBDD.id); 
         }
       });
     });
@@ -149,7 +148,7 @@ export const Checkout = () => {
       setErrores({});
 
       window.location.replace("/");
-    }, 5000);
+    }, 6000);
   };
 
   return (

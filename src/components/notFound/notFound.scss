@@ -1,0 +1,30 @@
+.errorPag{
+    text-align: center;
+    
+    .texto {
+        margin-top: 3rem;
+        font-size: small;
+    }
+
+    .error {
+        font-size: 20rem;
+        margin-top: -2rem;
+        margin-bottom: 0rem;
+        color: white;
+        text-shadow: 1px 25px 28px rgb(181, 181, 181);
+    }
+
+    .volver {
+        font-size: small;
+        .inicio {
+            cursor: pointer;
+            font-size:medium; 
+            margin-right: 0.4rem;
+            color: black;
+            &:hover {
+                color: #04dd0f;
+                text-decoration:underline;
+            }
+        }
+    }
+}

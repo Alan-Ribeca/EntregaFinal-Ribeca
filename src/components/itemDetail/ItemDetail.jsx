@@ -16,7 +16,7 @@ export const ItemDetail = ({ item }) => {
 
   const handleAddToCart = () => {
     addItem(item, count)
-    toast.success(`Producto agregado al carrito correctamente`, {
+    toast.success(`Su producto ha sido agregado al carrito`, {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
