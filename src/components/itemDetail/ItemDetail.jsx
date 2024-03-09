@@ -67,7 +67,7 @@ export const ItemDetail = ({ item }) => {
             Descripción
           </button>
           <button className="btnItemProduc" onClick={ocultarCuidados}>
-            Cuidados
+            Detalles
           </button>
           <button className="btnItemProduc" onClick={ocultarValoraciones}>
             Valoración

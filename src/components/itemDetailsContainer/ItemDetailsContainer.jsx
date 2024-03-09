@@ -15,7 +15,7 @@ export const ItemDetailsContainer = () => {
     getProduct(pid)
       .then((prod) => setItem(prod))
       .catch((error) => console.log(error));
-  });
+  }, [pid]);
   return (
     <section className="itemDetalle">
       <ItemDetail item={item} />
