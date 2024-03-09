@@ -7,10 +7,7 @@ export const Item = ({ product }) => {
     <section className="Producto">
       <Link to={`/product/${product.id}`}>
         <div className="img-producto">
-          <img
-            src={`${product.img}`}
-            alt={`Imagen de ${product.title}`}
-          />
+          <img src={`${product.img}`} alt={`Imagen de ${product.title}`} />
         </div>
         <div className="infoProducto">
           <h2 className="titleProduc">{product.title}</h2>

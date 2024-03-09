@@ -3,7 +3,7 @@ import "./itemDetail.scss";
 import { Link } from "react-router-dom";
 import { useCounter } from "../../hooks/useCounter";
 import { useCarritoContext } from "../../context/CartContext";
-import { toast } from "react-toastify"
+import { toast } from "react-toastify";
 import {
   ocultarDescripcion,
   ocultarCuidados,
@@ -11,22 +11,22 @@ import {
 } from "./Ocultar";
 
 export const ItemDetail = ({ item }) => {
-  const { addItem } = useCarritoContext()
+  const { addItem } = useCarritoContext();
   const { count, increment, decrement } = useCounter(1, item.stock, 1);
 
   const handleAddToCart = () => {
-    addItem(item, count)
+    addItem(item, count);
     toast.success(`Su producto ha sido agregado al carrito`, {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark"
-    })
-}
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
+  };
   return (
     <>
       <div className="imagen">
@@ -38,24 +38,24 @@ export const ItemDetail = ({ item }) => {
       </div>
       <div className="contenedorInfo">
         <div className="homeItem">
-        <Link to={"/"} >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="38"
-            height="38"
-            fill="currentColor"
-            className="home"
-            viewBox="0 0 16 16"
-          >
-            <path
-              fillRule="evenodd"
-              d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"
-            />
-            <path
-              fillRule="evenodd"
-              d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"
-            />
-          </svg>
+          <Link to={"/"}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="38"
+              height="38"
+              fill="currentColor"
+              className="home"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fillRule="evenodd"
+                d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"
+              />
+              <path
+                fillRule="evenodd"
+                d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"
+              />
+            </svg>
           </Link>
         </div>
         <strong className="categoria">{item.category}</strong>

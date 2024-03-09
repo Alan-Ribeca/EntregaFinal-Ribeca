@@ -1,22 +1,26 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 import { BotonesNavbar } from "../botonesNavbar/BotonesNavbar";
 import "./navbar.scss";
 import imgLogo from "/img/logo.png";
-import { useLocation } from 'react-router-dom';
+import { useLocation } from "react-router-dom";
 
 export const Navbar = () => {
   const [showSearch, setShowSearch] = useState(true);
   const location = useLocation();
 
   useEffect(() => {
-    setShowSearch(location.pathname !== '/cart' && location.pathname !== '/checkout' && !location.pathname.startsWith('/product/'));
+    setShowSearch(
+      location.pathname !== "/cart" &&
+        location.pathname !== "/checkout" &&
+        !location.pathname.startsWith("/product/")
+    );
   }, [location]);
 
   return (
     <nav className="navbar">
       <div className="containerNav">
         <img src={imgLogo} className="logoTienda" alt="logo de la tienda" />
-        <BotonesNavbar/>
+        <BotonesNavbar />
       </div>
       <section className="buscador">
         <div className="group">

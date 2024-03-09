@@ -5,7 +5,9 @@ export const IconFooter = () => {
     <>
       <section className="info">
         <address className="infoFooter">
-          <h1 className="tituloFooter">Encontranos en<span className="puntosTitle">...</span></h1>
+          <h1 className="tituloFooter">
+            Encontranos en<span className="puntosTitle">...</span>
+          </h1>
           <ul className="icon-list">
             <li>
               <span className="icons">

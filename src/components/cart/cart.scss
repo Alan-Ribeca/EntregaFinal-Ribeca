@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  
+
   .cartVacio {
     text-transform: uppercase;
   }
@@ -25,7 +25,7 @@
     margin-top: 3rem;
     margin-left: 7rem;
     background: rgba(253, 253, 253, 0.384);
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.20);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
     border-radius: 7px;
     min-width: 333px;
     max-height: 250px;
@@ -49,38 +49,38 @@
     }
 
     .botonResumen {
-        display: flex;
-        justify-content: space-evenly;
-        margin-top: 1.5rem;
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: 1.5rem;
 
-        .vaciarCarrito {
-            border: none;
-            background-color: transparent;
-            color: rgba(0, 0, 255, 0.623);
-            &:hover {
-                cursor: pointer;
-            }
+      .vaciarCarrito {
+        border: none;
+        background-color: transparent;
+        color: rgba(0, 0, 255, 0.623);
+        &:hover {
+          cursor: pointer;
         }
+      }
 
-        .seguirComprando {
-            border: none;
-            background-color: transparent;
-            color: #02be0b;
-            font-weight: bold;
+      .seguirComprando {
+        border: none;
+        background-color: transparent;
+        color: #02be0b;
+        font-weight: bold;
 
-            &:hover {
-                cursor: pointer;
-            }
+        &:hover {
+          cursor: pointer;
         }
+      }
     }
 
     .finalizarCompra {
-        border: none;
-        background-color: green;
-        color: white;
-        width: 74%;
-        margin-left: 2.9rem;
-        margin-bottom: 0.4rem;
+      border: none;
+      background-color: green;
+      color: white;
+      width: 74%;
+      margin-left: 2.9rem;
+      margin-bottom: 0.4rem;
     }
   }
 }

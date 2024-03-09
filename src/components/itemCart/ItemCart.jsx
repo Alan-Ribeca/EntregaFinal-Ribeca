@@ -5,7 +5,7 @@ import { useCounter } from "../../hooks/useCounter";
 import { Link } from "react-router-dom";
 
 export const ItemCart = ({ product }) => {
-  const { removeItem, } = useCarritoContext();
+  const { removeItem } = useCarritoContext();
   const { count, increment, decrement } = useCounter(
     product.quantity,
     product.stock,

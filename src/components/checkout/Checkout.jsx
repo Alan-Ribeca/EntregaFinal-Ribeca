@@ -1,18 +1,17 @@
 /* eslint-disable no-unused-vars */
 import "./checkout.scss";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 import { useRef, useState } from "react";
 import { validar } from "./validar";
 import { useCarritoContext } from "../../context/CartContext.jsx";
 import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify"
+import { toast } from "react-toastify";
 import {
   createOrdenCompra,
   getOrdenCompra,
   getProduct,
   updateProduct,
 } from "../../firebase/firebase";
-
 
 export const Checkout = () => {
   const formRef = useRef();
@@ -80,7 +79,7 @@ export const Checkout = () => {
               theme: "dark",
             }
           );
-          aux.filter((prod) => prod.id != prodBDD.id); 
+          aux.filter((prod) => prod.id != prodBDD.id);
         }
       });
     });

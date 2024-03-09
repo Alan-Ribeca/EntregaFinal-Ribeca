@@ -21,7 +21,7 @@ export const ItemListContainer = () => {
           ocultarBento(false);
           setProducts(productosFiltrados);
         } else {
-          const productosFiltrados = prods.filter(prod => prod.stock > 0)
+          const productosFiltrados = prods.filter((prod) => prod.stock > 0);
           setProducts(productosFiltrados);
           ocultarBento(true);
         }
