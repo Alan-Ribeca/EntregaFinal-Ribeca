@@ -9,7 +9,7 @@ export const Navbar = () => {
   const location = useLocation();
 
   useEffect(() => {
-    setShowSearch(location.pathname !== '/cart' && location.pathname !== '/checkout');
+    setShowSearch(location.pathname !== '/cart' && location.pathname !== '/checkout' && !location.pathname.startsWith('/product/'));
   }, [location]);
 
   return (
