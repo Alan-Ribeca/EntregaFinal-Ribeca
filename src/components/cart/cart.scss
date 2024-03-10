@@ -37,15 +37,20 @@
     .envio,
     p {
       padding-left: 1rem;
+      display: flex;
+      justify-content: space-between;
+      padding-right: 5%;
     }
 
     .gratis {
       color: #02be0b;
       margin-left: 65%;
     }
-    .totalPrice {
-      margin-left: 64.7%;
-      margin-right: 0.5rem;
+
+    .prueba {
+      display: flex;
+      justify-content: space-between;
+      padding-right: 5%;
     }
 
     .botonResumen {

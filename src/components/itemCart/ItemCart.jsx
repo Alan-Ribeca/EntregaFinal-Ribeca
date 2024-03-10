@@ -5,12 +5,26 @@ import { useCounter } from "../../hooks/useCounter";
 import { Link } from "react-router-dom";
 
 export const ItemCart = ({ product }) => {
-  const { removeItem } = useCarritoContext();
+  const { removeItem, updateTotalPrice } = useCarritoContext();
   const { count, increment, decrement } = useCounter(
     product.quantity,
     product.stock,
     1
   );
+
+  const handleIncrement = () => {
+    if (count < product.stock) {
+      increment();
+      updateTotalPrice(product.id, count + 1);
+    }
+  };
+
+  const handleDecrement = () => {
+    if (count > 1) {
+      decrement();
+      updateTotalPrice(product.id, count - 1);
+    }
+  };
 
   const formattedPrice = (price) => {
     return price.toLocaleString('es-ES');
@@ -24,11 +38,11 @@ export const ItemCart = ({ product }) => {
         </Link>
         <p className="description">{product.description}</p>
         <div className="cantidad">
-          <button className="modificar" onClick={decrement}>
+          <button className="modificar" onClick={handleDecrement}>
             -
           </button>
           <span className="cantidadProduc">{count}</span>
-          <button className="modificar" onClick={increment}>
+          <button className="modificar" onClick={handleIncrement}>
             +
           </button>
           <p className="totalPrice">Precio ${formattedPrice(product.price * count)}</p>

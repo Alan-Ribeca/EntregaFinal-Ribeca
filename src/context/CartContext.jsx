@@ -42,12 +42,15 @@ export const CarritoProvider = (props) => {
         return carrito.reduce((acum, prod) => acum += prod.quantity, 0)
     }
 
-    const totalPrice = () => {
-        return carrito.reduce((acum, prod) => acum += (prod.quantity * prod.price), 0)
-    }
+    const updateTotalPrice = (id, quantity) => {
+        const updatedCarrito = carrito.map(prod =>
+          prod.id === id ? { ...prod, quantity } : prod
+        );
+        setCarrito(updatedCarrito);
+      };
    
     return(
-        <CarritoContext.Provider value={{ carrito, addItem, removeItem, emptyCart, getItemQuantity, totalPrice }}>
+        <CarritoContext.Provider value={{ carrito, addItem, removeItem, emptyCart, getItemQuantity, updateTotalPrice }}>
             {props.children}
         </CarritoContext.Provider>
     )

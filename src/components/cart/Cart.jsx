@@ -5,7 +5,19 @@ import { ItemList } from "../itemList/ItemLis";
 import { ItemCart } from "../itemCart/ItemCart";
 
 export const Cart = () => {
-  const { carrito, totalPrice, emptyCart } = useCarritoContext();
+  const { carrito, emptyCart } = useCarritoContext();
+
+  const formattedPrice = (price) => {
+    return price.toLocaleString('es-ES');
+  }
+
+  const calculateTotalPrice = () => {
+    let totalPrice = 0;
+    carrito.forEach(product => {
+      totalPrice += product.quantity * product.price;
+    });
+    return totalPrice;
+  };
 
   return (
     <>
@@ -30,8 +42,8 @@ export const Cart = () => {
               <p className="envio">
                 Envio <strong className="gratis">Gratis</strong>
               </p>
-              <p>
-                Total <strong className="totalPrice">$ {totalPrice()}</strong>
+              <p className="prueba">
+                Total <strong className="totalPrice">${formattedPrice(calculateTotalPrice())}</strong>
               </p>
               <div className="botonResumen">
                 <button onClick={emptyCart} className="vaciarCarrito">
