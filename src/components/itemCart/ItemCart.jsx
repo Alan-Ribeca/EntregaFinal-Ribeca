@@ -12,10 +12,16 @@ export const ItemCart = ({ product }) => {
     1
   );
 
+  const formattedPrice = (price) => {
+    return price.toLocaleString('es-ES');
+  }
+
   return (
     <section className="itemCart">
       <div className="infoProduc">
-        <img src={`${product.img}`} alt={`Imagen de ${product.title}`} />
+        <Link to={`/product/${product.id}`}>
+          <img src={`${product.img}`} alt={`Imagen de ${product.title}`} />
+        </Link>
         <p className="description">{product.description}</p>
         <div className="cantidad">
           <button className="modificar" onClick={decrement}>
@@ -25,7 +31,7 @@ export const ItemCart = ({ product }) => {
           <button className="modificar" onClick={increment}>
             +
           </button>
-          <p className="totalPrice">Precio ${product.price * count}</p>
+          <p className="totalPrice">Precio ${formattedPrice(product.price * count)}</p>
         </div>
         <button className="eliminar" onClick={() => removeItem(product.id)}>
           Eliminar
