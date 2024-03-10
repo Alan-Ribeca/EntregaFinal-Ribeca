@@ -22,7 +22,7 @@ export const ItemCart = ({ product }) => {
         <Link to={`/product/${product.id}`}>
           <img src={`${product.img}`} alt={`Imagen de ${product.title}`} />
         </Link>
-        <p className="description">{product.title}</p>
+        <p className="description">{product.description}</p>
         <div className="cantidad">
           <button className="modificar" onClick={decrement}>
             -

@@ -66,7 +66,7 @@ export const ItemDetail = ({ item }) => {
         </div>
         <strong className="categoria">{item.category}</strong>
         <p className="nombreProd">{item.title}</p>
-        <strong className="precioProduc">$ {formattedPrice(item.price)}</strong>
+        <strong className="precioProduc">$ {item.price}</strong>
 
         <div className="botonesProduc">
           <button className="btnItemProduc" onClick={ocultarDescripcion}>
