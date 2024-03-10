@@ -27,6 +27,12 @@ export const ItemDetail = ({ item }) => {
       theme: "dark",
     });
   };
+
+  const formattedPrice = (price) => {
+    return price.toLocaleString('es-ES');
+  }
+
+
   return (
     <>
       <div className="imagen">
@@ -60,7 +66,7 @@ export const ItemDetail = ({ item }) => {
         </div>
         <strong className="categoria">{item.category}</strong>
         <p className="nombreProd">{item.title}</p>
-        <strong className="precioProduc">${item.price}</strong>
+        <strong className="precioProduc">$ {formattedPrice(item.price)}</strong>
 
         <div className="botonesProduc">
           <button className="btnItemProduc" onClick={ocultarDescripcion}>
@@ -99,7 +105,7 @@ export const ItemDetail = ({ item }) => {
             </div>
             <div className="total">
               <strong>Total Precio</strong>
-              <p className="numero">${item.price * count}</p>
+              <p className="numero">$ {formattedPrice(item.price * count)}</p>
             </div>
           </div>
         </div>
