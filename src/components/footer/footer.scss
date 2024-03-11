@@ -68,3 +68,37 @@
     }
   }
 }
+
+@media screen and (max-width: 952px) {
+  .footer {
+    gap: 0;
+    .procteccion {
+      height: 100%;
+
+      .escudo {
+        margin: 0;
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    .tarjeta {
+      height: 100%;
+      .card {
+        margin-top: 0;
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 704px) {
+  .footer {
+    grid-template-columns: auto;
+
+    .procteccion {
+      margin-bottom: 0.7rem;
+    }
+  }
+}

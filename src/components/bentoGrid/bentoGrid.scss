@@ -122,3 +122,28 @@
     line-height: initial;
   }
 }
+
+
+@media screen and (min-width: 500px) and (max-width: 900px) {
+
+  .bento {
+    grid-template-columns: repeat(3, 1fr);
+    .auri {
+      grid-column: 1 / 1;
+    }
+
+    .moni {
+      grid-column: 3/ 4;
+    }
+
+    img {
+      height: 166px;
+    }
+
+    .bentoButon {
+      letter-spacing: initial;
+      line-height: initial;
+      top: 72%;
+    }
+  }
+}
