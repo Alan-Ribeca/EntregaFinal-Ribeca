@@ -9,18 +9,32 @@ export const BotonesNavbar = () => {
         <Link to={"/"}>
           <button className="botonNav"> Inicio </button>
         </Link>
-        <Link to={"/category/Pc"}>
-          <button className="botonNav"> Pc </button>
-        </Link>
-        <Link to={"/category/Celular"}>
-          <button className="botonNav"> Celulares </button>
-        </Link>
-        <Link to={"/category/Monitor"}>
-          <button className="botonNav"> Monitores </button>
-        </Link>
-        <Link to={"/category/accesorios"}>
-          <button className="botonNav"> Accesorios </button>
-        </Link>
+        <details className="botonNav">
+          <summary>Dispositivos</summary>
+          <ul>
+            <Link to={"/category/Pc"}>
+              <li className="liBotones">Pc</li>
+            </Link>
+            <Link to={"/category/Netbook"}>
+              <li className="liBotones">Netbook</li>
+            </Link>
+            <Link to={"/category/Celular"}>
+              <li className="liBotones">Celulares</li>
+            </Link>
+          </ul>
+        </details>
+        <details className="botonNav">
+          <summary>Perifericos</summary>
+          <Link to={"/category/Monitor"}>
+            <li className="liBotones">Monitor</li>
+          </Link>
+          <Link to={"/category/accesorios"}>
+            <li className="liBotones">Auriculares</li>
+          </Link>
+          <Link to={"/category/Componente"}>
+            <li className="liBotones">Componentes</li>
+          </Link>
+        </details>
         <CartWidget />
       </div>
     </>
