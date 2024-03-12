@@ -1,7 +1,12 @@
 .navbar {
+  .hamburger {
+    display: none;
+  }
+
   .botonesNavbar {
     display: flex;
     align-items: center;
+
     .botonNav {
       border: none;
       background-color: transparent;
@@ -11,6 +16,7 @@
       text-decoration: none;
       font-family: "Times New Roman", Times, serif;
       position: relative;
+      display: block;
 
       &:hover {
         color: #04dd0f;
@@ -25,7 +31,6 @@
       margin-left: 2.5rem;
       padding-top: 0;
     }
-
 
     ul {
       margin: 0;
@@ -90,6 +95,51 @@
         fill: #baffc3;
         width: 1rem;
         height: 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .navbar {
+    .botonesNavbar {
+      display: none;
+    }
+
+    .hamburger {
+      display: block;
+      cursor: pointer;
+
+      input {
+        display: none;
+      }
+
+      svg {
+        height: 3em;
+        transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .line {
+        fill: none;
+        stroke: rgb(0, 0, 0);
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3;
+        transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+          stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .line-top-bottom {
+        stroke-dasharray: 12 63;
+      }
+
+      input:checked + svg {
+        transform: rotate(-45deg);
+      }
+
+      input:checked + svg .line-top-bottom {
+        stroke-dasharray: 20 300;
+        stroke-dashoffset: -32.42;
       }
     }
   }
