@@ -32,16 +32,60 @@ export const BotonesNavbar = () => {
 
   return (
     <>
-      <label className="hamburger">
-        <input type="checkbox" />
-        <svg viewBox="0 0 32 32">
+      <button className="botonPrueba">
+        <CartWidget />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="47"
+          height="47"
+          fill="currentColor"
+          className="abrir"
+          viewBox="0 0 16 16"
+        >
           <path
-            className="line line-top-bottom"
-            d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"
-          ></path>
-          <path className="line" d="M7 16 27 16"></path>
+            fillRule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+          />
         </svg>
-      </label>
+      </button>
+
+      <div className="movil">
+        <button className="btnMovil">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="38"
+          height="38"
+          fill="currentColor"
+          className="home"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fillRule="evenodd"
+            d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"
+          />
+          <path
+            fillRule="evenodd"
+            d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"
+          />
+        </svg>
+        </button>
+        <ul className="ulMovil">
+          <li className="liMovil">Inicio</li>
+          <hr />
+          <li className="liMovil">Pc</li>
+          <hr />
+          <li className="liMovil">Netbook</li>
+          <hr />
+          <li className="liMovil">Celulares</li>
+          <hr />
+          <li className="liMovil">Monitores</li>
+          <hr />
+          <li className="liMovil">Accesorios</li>
+          <hr />
+          <li className="liMovil">Auriculares</li>
+        </ul>
+      </div>
+
       <div className="botonesNavbar">
         <Link to={"/"}>
           <button className="botonNav">Inicio</button>
