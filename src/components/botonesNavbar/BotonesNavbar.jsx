@@ -26,6 +26,10 @@ export const BotonesNavbar = () => {
     setPerifericosAbierto(false);
   };
 
+  const clickSummary = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <div className="botonesNavbar">
       <Link to={"/"}>
@@ -36,7 +40,9 @@ export const BotonesNavbar = () => {
         open={dispositivosAbierto}
         onClick={toggleDispositivos}
       >
-        <summary>Dispositivos</summary>
+        <summary className="summary" onClick={clickSummary}>
+          Dispositivos
+        </summary>
         <ul>
           <Link to={"/category/Pc"}>
             <li className="liBotones" onClick={closeDetails}>
@@ -60,7 +66,9 @@ export const BotonesNavbar = () => {
         open={perifericosAbierto}
         onClick={togglePerifericos}
       >
-        <summary>Periféricos</summary>
+        <summary className="summary" onClick={clickSummary}>
+          Periféricos
+        </summary>
         <ul>
           <Link to={"/category/Monitor"}>
             <li className="liBotones" onClick={closeDetails}>
