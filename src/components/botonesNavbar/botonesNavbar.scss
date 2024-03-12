@@ -10,6 +10,7 @@
       margin-right: 3rem;
       text-decoration: none;
       font-family: "Times New Roman", Times, serif;
+      position: relative;
 
       &:hover {
         color: #04dd0f;
@@ -25,9 +26,12 @@
       padding-top: 0;
     }
 
+
     ul {
-      margin-top: 0;
+      margin: 0;
       padding: 0;
+      position: absolute;
+      left: 18%;
     }
 
     a {
@@ -41,7 +45,6 @@
 
     .liBotones {
       list-style: none;
-      text-decoration: none;
       margin: 0.5rem 0;
     }
   }
@@ -49,13 +52,13 @@
   .buscador {
     display: flex;
     justify-content: center;
-
     .group {
       display: flex;
       line-height: 28px;
       align-items: center;
       position: relative;
       width: 50%;
+      margin-top: 1.5rem;
 
       .input {
         width: 100%;
