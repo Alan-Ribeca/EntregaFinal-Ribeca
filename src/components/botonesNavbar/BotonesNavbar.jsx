@@ -2,6 +2,7 @@ import "./botonesNavbar.scss";
 import { useState, useEffect } from "react";
 import { CartWidget } from "../cardtWidget/CartWidget";
 import { Link, useLocation } from "react-router-dom";
+import { abrir, cerrar } from "./AbrirMenu";
 
 export const BotonesNavbar = () => {
   const [dispositivosAbierto, setDispositivosAbierto] = useState(false);
@@ -32,7 +33,7 @@ export const BotonesNavbar = () => {
 
   return (
     <>
-      <button className="botonPrueba">
+      <div className="botonPrueba" onClick={abrir}>
         <CartWidget />
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -47,42 +48,56 @@ export const BotonesNavbar = () => {
             d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
           />
         </svg>
-      </button>
+      </div>
 
       <div className="movil">
-        <button className="btnMovil">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="38"
-          height="38"
-          fill="currentColor"
-          className="home"
-          viewBox="0 0 16 16"
-        >
-          <path
-            fillRule="evenodd"
-            d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"
-          />
-          <path
-            fillRule="evenodd"
-            d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"
-          />
-        </svg>
+        <button className="btnMovil" onClick={cerrar}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="38"
+            height="38"
+            fill="currentColor"
+            className="home"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fillRule="evenodd"
+              d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"
+            />
+            <path
+              fillRule="evenodd"
+              d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"
+            />
+          </svg>
         </button>
         <ul className="ulMovil">
-          <li className="liMovil">Inicio</li>
+          <Link to={"/"}>
+            <li className="liMovil">Inicio</li>
+          </Link>
           <hr />
-          <li className="liMovil">Pc</li>
+          <Link to={"/category/Pc"}>
+            <li className="liMovil">Pc</li>
+          </Link>
           <hr />
-          <li className="liMovil">Netbook</li>
+          <Link to={"/category/Netbook"}>
+            <li className="liMovil">Netbook</li>
+          </Link>
           <hr />
-          <li className="liMovil">Celulares</li>
+          <Link to={"/category/Celular"}>
+            <li className="liMovil">Celulares</li>
+          </Link>
           <hr />
-          <li className="liMovil">Monitores</li>
+          <Link to={"/category/Monitor"}>
+            <li className="liMovil">Monitores</li>
+          </Link>
           <hr />
-          <li className="liMovil">Accesorios</li>
+          <Link to={"/category/accesorios"}>
+            <li className="liMovil">Accesorios</li>
+          </Link>
           <hr />
-          <li className="liMovil">Auriculares</li>
+          <Link to={"/category/Componente"}>
+            <li className="liMovil">Auriculares</li>
+          </Link>
         </ul>
       </div>
 

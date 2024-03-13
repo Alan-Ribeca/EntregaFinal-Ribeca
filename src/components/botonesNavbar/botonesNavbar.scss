@@ -1,6 +1,7 @@
 .navbar {
   .movil,
-  .botonPrueba {
+  .botonPrueba,
+  .prueba {
     display: none;
   }
 
@@ -108,7 +109,6 @@
     }
 
     .botonPrueba {
-      display: block;
       border: none;
       background-color: transparent;
       padding: 0;
@@ -131,8 +131,7 @@
     }
 
     .containerNav {
-      .movil {
-        display: none !important;
+      .prueba {
         position: absolute;
         width: 230px;
         background-color: rgb(54, 54, 54);
@@ -151,6 +150,7 @@
           position: absolute;
           top: 1%;
           left: 79%;
+          color: white;
 
           .home {
             &:hover {
@@ -164,6 +164,10 @@
           margin: 4.4rem 0;
           padding: 0;
 
+          a {
+            color: white;
+            text-decoration: none;
+          }
           hr {
             border-color: #04bb0d;
           }
@@ -179,6 +183,10 @@
             }
           }
         }
+      }
+
+      .movil {
+        display: none !important;
       }
     }
   }
