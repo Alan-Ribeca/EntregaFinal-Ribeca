@@ -33,9 +33,9 @@ export const BotonesNavbar = () => {
 
   return (
     <>
-      <div className="botonPrueba" onClick={abrir}>
+      <div className="botonPrueba">
         <CartWidget />
-        <svg
+        <svg onClick={abrir}
           xmlns="http://www.w3.org/2000/svg"
           width="47"
           height="47"
@@ -71,31 +71,31 @@ export const BotonesNavbar = () => {
           </svg>
         </button>
         <ul className="ulMovil">
-          <Link to={"/"}>
+          <Link to={"/"} onClick={cerrar}>
             <li className="liMovil">Inicio</li>
           </Link>
           <hr />
-          <Link to={"/category/Pc"}>
+          <Link to={"/category/Pc"} onClick={cerrar}>
             <li className="liMovil">Pc</li>
           </Link>
           <hr />
-          <Link to={"/category/Netbook"}>
+          <Link to={"/category/Netbook"} onClick={cerrar}>
             <li className="liMovil">Netbook</li>
           </Link>
           <hr />
-          <Link to={"/category/Celular"}>
+          <Link to={"/category/Celular"} onClick={cerrar}>
             <li className="liMovil">Celulares</li>
           </Link>
           <hr />
-          <Link to={"/category/Monitor"}>
+          <Link to={"/category/Monitor"} onClick={cerrar}>
             <li className="liMovil">Monitores</li>
           </Link>
           <hr />
-          <Link to={"/category/accesorios"}>
+          <Link to={"/category/accesorios"} onClick={cerrar}>
             <li className="liMovil">Accesorios</li>
           </Link>
           <hr />
-          <Link to={"/category/Componente"}>
+          <Link to={"/category/Componente"} onClick={cerrar}>
             <li className="liMovil">Auriculares</li>
           </Link>
         </ul>
