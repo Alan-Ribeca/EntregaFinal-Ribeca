@@ -11,4 +11,13 @@
   }
 }
 
-
+@media screen and (max-width: 900px) { 
+  .navbar {
+    .containerNav {
+      
+      .logoTienda {
+        width: 8rem;
+      }
+    }
+  }
+}

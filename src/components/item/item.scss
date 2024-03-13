@@ -88,3 +88,29 @@
     }
   }
 }
+
+
+@media screen and (max-width: 900px) { 
+  .containerProductos {
+    .Producto {
+      min-height: 10rem;
+      margin: 0 1rem;
+
+      .img-producto {
+        height: 47%;
+      }
+
+      .infoProducto {
+        margin-left: 1rem;
+        .verMas {
+          top: 93%;
+          left: 75%;
+        }
+
+        .titleProduc {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+}
