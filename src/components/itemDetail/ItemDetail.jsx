@@ -29,9 +29,8 @@ export const ItemDetail = ({ item }) => {
   };
 
   const formattedPrice = (price) => {
-    return price.toLocaleString('es-ES');
-  }
-
+    return price.toLocaleString("es-ES");
+  };
 
   return (
     <>
@@ -109,9 +108,11 @@ export const ItemDetail = ({ item }) => {
             </div>
           </div>
         </div>
-        <button className="comprarItem" onClick={handleAddToCart}>
-          Agregar al carrito
-        </button>
+        <div className="comprarBtn">
+          <button className="comprarItem" onClick={handleAddToCart}>
+            Agregar al carrito
+          </button>
+        </div>
       </div>
     </>
   );

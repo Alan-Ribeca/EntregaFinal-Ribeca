@@ -43,7 +43,7 @@
 
   .contenedorInfo {
     background-color: rgb(46, 45, 45);
-    padding: 2rem 0 0 2rem;
+    padding: 1.5rem 0 0 2rem;
 
     .categoria {
       color: green;
@@ -52,7 +52,7 @@
     .nombreProd {
       font-size: x-large;
       max-width: 86%;
-      margin: 1rem 0 0 0;
+      margin: 0.4rem 0 0 0;
     }
 
     .precioProduc {
@@ -123,7 +123,7 @@
 
       .descripsionProduc {
         font-size: small;
-        max-width: 50%;
+        max-width: 80%;
         min-height: 6rem;
         word-spacing: 2px;
         margin-top: 1.5rem;
@@ -167,12 +167,12 @@
 
         .liItem {
           width: 390px;
-          margin-bottom: 1rem;
+          margin-bottom: 1.2rem;
         }
       }
 
       .valoracion {
-        max-width: 50%;
+        max-width: 80%;
         display: none;
         min-height: 6rem;
         word-spacing: 2px;
@@ -184,12 +184,14 @@
 
     .stock {
       max-width: 53%;
+
       .cantidad {
         display: flex;
         justify-content: space-around;
 
         .btnConunt {
           font-size: 2rem;
+          margin-right: 3rem;
         }
 
         .cantidadItem {
@@ -214,15 +216,19 @@
       }
     }
 
-    .comprarItem {
-      position: relative;
-      top: 7%;
-      left: 15%;
-      width: 14rem;
-      height: 3rem;
-      cursor: pointer;
-      &:hover {
-        background-color: #04dd0f9c;
+    .comprarBtn {
+      display: flex;
+      justify-content: center;
+      max-width: 53%;
+      margin-top: 2.5rem;
+
+      .comprarItem {
+        width: 14rem;
+        height: 3rem;
+        cursor: pointer;
+        &:hover {
+          background-color: #04dd0f9c;
+        }
       }
     }
   }
@@ -240,6 +246,19 @@
       width: 100%;
       height: 45rem;
       margin-top: 1rem;
+
+      .contenedorInfo {
+        .nombreProd {
+          font-size: larger;
+          margin-bottom: 0.4rem;
+        }
+
+        .botonesProduc {
+          .btnItemProduc {
+            margin-top: 2rem;
+          }
+        }
+      }
       .imagen {
         height: 26%;
         img {
@@ -248,7 +267,43 @@
       }
 
       .contenedorInfo {
-        height: 70%;
+        height: 73%;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 488px) {
+  .itemDetalle {
+    .contenedorInfo {
+      padding-left: 1rem;
+      .botonesProduc {
+        .btnItemProduc {
+          font-size: small;
+        }
+
+        .descripsionProduc {
+          max-width: 98%;
+        }
+
+        .valoracion {
+          max-width: 98%;
+        }
+
+        .cuidados {
+          .liItem {
+            width: 100%;
+          }
+        }
+      }
+
+      .stock {
+        max-width: 100%;
+      }
+
+      .comprarBtn {
+        max-width: 100%;
       }
     }
   }
