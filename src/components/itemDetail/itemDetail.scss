@@ -65,6 +65,7 @@
     .botonesProduc {
       height: 241px;
       margin-bottom: 0.5rem;
+      max-width: 29rem;
       .btnItemProduc {
         width: 8em;
         position: relative;
@@ -133,7 +134,7 @@
       .cuidados {
         list-style-type: none;
         padding: 0;
-        max-width: 60%;
+        max-width: 95%;
         display: none;
         min-height: 6rem;
         word-spacing: 2px;
@@ -222,6 +223,32 @@
       cursor: pointer;
       &:hover {
         background-color: #04dd0f9c;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 799px) {
+  .main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    .itemDetalle {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 45rem;
+      margin-top: 1rem;
+      .imagen {
+        height: 26%;
+        img {
+          height: 90%;
+        }
+      }
+
+      .contenedorInfo {
+        height: 70%;
       }
     }
   }

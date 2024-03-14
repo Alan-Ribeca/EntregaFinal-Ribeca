@@ -90,7 +90,7 @@
 }
 
 
-@media screen and (max-width: 900px) { 
+@media screen and (max-width: 744px) and (max-whidth: 900px) { 
   .containerProductos {
     .Producto {
       min-height: 10rem;
@@ -104,11 +104,24 @@
         margin-left: 1rem;
         .verMas {
           top: 93%;
-          left: 75%;
+          left: 60%;
         }
 
         .titleProduc {
           margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 423px) {
+  .containerProductos {
+    .Producto {
+      .infoProducto {
+        .verMas {
+          left: 78%;
         }
       }
     }
