@@ -10,6 +10,7 @@
   .infoProduc {
     display: flex;
     position: relative;
+    justify-content: center;
     img {
       width: 130px;
     }
@@ -19,6 +20,10 @@
       max-width: 60%;
       font-size: medium;
       margin: 0.5rem 2rem 0rem 1rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: large;
     }
 
     .cantidad {
@@ -46,7 +51,7 @@
 
     .eliminar {
       position: absolute;
-      bottom: 0%;
+      bottom: 2%;
       left: 16.5%;
       border: none;
       background-color: transparent;
@@ -59,7 +64,7 @@
 
     .comprarIndivual {
       position: absolute;
-      bottom: 0%;
+      bottom: 2%;
       left: 25%;
       border: none;
       background-color: transparent;
@@ -67,6 +72,111 @@
 
       &:hover {
         cursor: pointer;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1270px) {
+  .itemProductos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .itemProductos {
+    .itemCart {
+      width: 672px;
+
+      .description {
+        min-width: 55%;
+        max-width: 55%;
+      }
+
+      .infoProduc {
+        img {
+          width: 111px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .eliminar {
+          left: 21.3%;
+        }
+
+        .comprarIndivual {
+          left: 32%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 704px) {
+  .itemProductos {
+    .itemCart {
+      width: 473px;
+      margin-top: 2rem;
+      .description {
+        min-width: 47%;
+        max-width: 47%;
+        margin-right: 0;
+      }
+
+      .infoProduc {
+        justify-content: initial;
+        height: 90px;
+        img {
+          width: 90px;
+        }
+
+        .cantidad {
+          width: 30%;
+          font-size: small;
+
+          .cantidadProduc {
+            font-size: 2rem;
+          }
+
+          .totalPrice {
+            margin: 0;
+          }
+        }
+
+        .eliminar {
+          bottom: 5%;
+        }
+
+        .comprarIndivual {
+          left: 37%;
+          bottom: 5%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .itemProductos .itemCart {
+    width: 355px;
+
+    .infoProduc {
+
+      img {
+        width: 70px;
+        margin-top: 1rem;
+      }
+
+      .eliminar {
+        font-size: small;
+      }
+
+      .comprarIndivual {
+        left: 42%;
+        font-size: small;
       }
     }
   }
