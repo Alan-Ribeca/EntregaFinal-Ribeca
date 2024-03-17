@@ -1,6 +1,6 @@
 .errorPag {
   text-align: center;
-
+ 
   .texto {
     margin-top: 3rem;
     font-size: small;
@@ -26,5 +26,17 @@
         text-decoration: underline;
       }
     }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .errorPag .error {
+    font-size: 14rem;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .errorPag .error {
+    font-size: 10rem;
   }
 }
