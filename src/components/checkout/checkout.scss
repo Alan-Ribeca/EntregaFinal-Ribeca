@@ -72,3 +72,33 @@ input {
   margin: 2rem 0 0 0;
   font-size: larger;
 }
+
+@media screen and (max-width: 600px) {
+  .formCompra {
+    .info {
+      padding: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .formCompra .compra {
+    width: 270px;
+    margin-top: 0;
+
+    input {
+      width: 270px;
+    }
+  }
+}
+
+@media screen and (max-width: 326px) {
+  .formCompra .compra {
+    width: 220px;
+    margin-top: 0;
+
+    input {
+      width: 230px;
+    }
+  }
+}
