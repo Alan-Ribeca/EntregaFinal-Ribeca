@@ -59,11 +59,12 @@
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
-        font-size: x-large;
+        font-size: 18px;
+        font-weight: 600;
       }
 
       .precio {
-        font-size: 1.3rem;
+        font-size: 14px;
         display: inline;
       }
 
@@ -76,7 +77,6 @@
       .stock {
         font-size: 15px;
         margin-top: 0.6rem;
-        font-weight: 800;
       }
 
       .verMas {
